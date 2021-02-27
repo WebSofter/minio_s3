@@ -1,0 +1,47 @@
+# Версия docker-compose
+version: '3.3'
+# Список наших сервисов (контейнеров)
+services:
+    nginx:
+        # используем последний стабильный образ nginx
+        image: nginx:latest
+        # маршрутизируем порты
+        ports:
+            - "5050:80"
+            - "443:443"
+        # монтируем директории, слева директории на основной машине, справа - куда они монтируются в контейнере
+        volumes:
+            - ./docker/nginx:/etc/nginx/conf.d
+            - ./www:/var/www
+            - ./docker/logs:/var/log/nginx
+        # nginx должен общаться с php контейнером
+        links:
+            - php
+    php:
+        # у нас свой образ для PHP, указываем путь к нему и говорим что его надо собрать
+        build: ./docker/images/php
+        # этот образ будет общаться с mysql
+        #links:
+        #    - minio
+        # монтируем директорию с проектами
+        volumes:
+            - ./www:/var/www
+    minio:
+        container_name: minio
+        image: minio/minio
+        ports:
+            - "9000:9000"
+        command: server /data
+        environment:
+            MINIO_ACCESS_KEY: access123
+            MINIO_SECRET_KEY: secret123
+        volumes:
+            - ./www/storage/:/data
+            # For localhost access, add the following to your /etc/hosts
+            # 127.0.0.1       my-minio-localhost-alias
+            # When accessing the minio container on a server with an accessible dns, use the following
+            #- ${HOSTNAME}
+    # When initializing the minio container for the first time, you will need to create an initial bucket named my-bucket.
+volumes:
+    minio:
+        driver: local

@@ -1,0 +1,14 @@
+{
+    "name": "websofter/minio",
+    "description": "Minio/php testinng project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "David Amirkhanov",
+            "email": "mail.websofter@gmail.com"
+        }
+    ],
+    "require": {
+        "aws/aws-sdk-php": "^3.173"
+    }
+}

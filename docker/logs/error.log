@@ -1,0 +1,17 @@
+2021/02/07 11:24:25 [error] 21#21: *4 "/var/www/site.loc/index.php" is not found (2: No such file or directory), client: 172.21.0.1, server: site.loc, request: "GET / HTTP/1.1", host: "site.loc"
+2021/02/07 15:03:09 [error] 20#20: *45 open() "/var/www/account/login" failed (2: No such file or directory), client: 172.21.0.1, server: site.loc, request: "GET /account/login HTTP/1.1", host: "site.loc"
+2021/02/07 15:03:39 [error] 20#20: *45 open() "/var/www/index.php/account/login" failed (20: Not a directory), client: 172.21.0.1, server: site.loc, request: "GET /index.php/account/login HTTP/1.1", host: "site.loc"
+2021/02/07 15:03:41 [error] 20#20: *45 open() "/var/www/index.php/account/login" failed (20: Not a directory), client: 172.21.0.1, server: site.loc, request: "GET /index.php/account/login HTTP/1.1", host: "site.loc"
+2021/02/07 15:03:54 [error] 20#20: *45 open() "/var/www/index.php/account/login" failed (20: Not a directory), client: 172.21.0.1, server: site.loc, request: "GET /index.php/account/login HTTP/1.1", host: "site.loc"
+2021/02/07 15:05:29 [error] 20#20: *54 open() "/var/www/index.php/account/login" failed (20: Not a directory), client: 172.21.0.1, server: site.loc, request: "GET /index.php/account/login HTTP/1.1", host: "site.loc"
+2021/02/07 15:05:31 [error] 20#20: *54 open() "/var/www/index.php/account/login" failed (20: Not a directory), client: 172.21.0.1, server: site.loc, request: "GET /index.php/account/login HTTP/1.1", host: "site.loc"
+2021/02/07 15:12:26 [error] 20#20: *58 open() "/var/www/index.php/account" failed (20: Not a directory), client: 172.21.0.1, server: site.loc, request: "GET /index.php/account HTTP/1.1", host: "site.loc"
+2021/02/07 15:23:21 [error] 20#20: *61 open() "/var/www/k" failed (2: No such file or directory), client: 172.21.0.1, server: site.loc, request: "GET /k HTTP/1.1", host: "site.loc"
+2021/02/07 15:23:50 [error] 20#20: *61 open() "/var/www/k" failed (2: No such file or directory), client: 172.21.0.1, server: site.loc, request: "GET /k HTTP/1.1", host: "site.loc"
+2021/02/07 15:23:51 [error] 20#20: *61 open() "/var/www/k" failed (2: No such file or directory), client: 172.21.0.1, server: site.loc, request: "GET /k HTTP/1.1", host: "site.loc"
+2021/02/07 15:33:16 [error] 20#20: *64 open() "/var/www/index.php/fr" failed (20: Not a directory), client: 172.21.0.1, server: site.loc, request: "GET /index.php/fr HTTP/1.1", host: "site.loc"
+2021/02/07 15:33:24 [error] 20#20: *64 open() "/var/www/index.php/fr" failed (20: Not a directory), client: 172.21.0.1, server: site.loc, request: "GET /index.php/fr HTTP/1.1", host: "site.loc"
+2021/02/09 02:02:13 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/site.loc.conf:15
+2021/02/09 02:05:36 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/site.loc.conf:15
+2021/02/09 02:09:17 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/site.loc.conf:15
+2021/02/09 08:42:34 [error] 21#21: *644 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.23.0.1, server: site.loc, request: "GET /favicon.ico HTTP/1.1", host: "site.loc", referrer: "http://site.loc/task/edit?task=32"
